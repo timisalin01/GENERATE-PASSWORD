@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+  body {
+    font-family: 'Abril Fatface', cursive , serif;
+  }
+
+  .container{
+  width: 100vw;
+  height: 100vh;
+  background-image: url(GEO.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  }
+
+  .container-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:  #f5f5f5;
+    width: 650px;
+    height: 550px;
+    padding: 3em;
+    border-radius: 0.5em;
+  }
+
+  h2{
+    width: 100%;
+    color: rgb(76, 59, 224);
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 40px;
+  }
+
+  h3{
+    display: block;
+    color: #000000;
+    padding-bottom: 0.6em;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: 20px;;
+  }
+
+  .generate-pass,
+  .clear-field{
+    padding: 0.75em;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #b917be;
+    border-radius: 0.5em;
+    border: none;
+    margin: 10px 0 10px 0;
+  }
+
+  .group-button{
+    display: flex;
+    width: 100%;
+    gap: 1em;
+  }
+
+  button:hover {
+    color: #000;
+    font-weight: 700;
+  }
+
+ .group-pass{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1.2em;
+ }
+
+ .group-pass > *{
+    flex-basis: 48%;
+ }
+
+ .pass-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.55em;
+    height: 2.75em;
+    color: #ffd901;
+    border-radius: 0.5em;
+    background-color: rgb(76, 59, 224);
+    cursor: pointer;
+    margin: 10px 0 10px 0;
+
+ }
+
+ .pass-box:hover {
+    color: #fff; 
+ }
+
+ .text-copy{
+    position: absolute;
+    left: 50%;
+    bottom: 19%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    padding: 0.75em;
+    color: #273549;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: inherit;
+    background-color: #d5d4d8;
+ }
+
+ .fine{
+    animation: copied 1s ease-in-out;
+    visibility: visible;
+ }
+
+ @keyframes copied {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* MEDIA QUERIES */
+@media screen and (max-width: 480px) {
+    .container {
+        background-image: url(GEO.png);
+    }
+  
+    .container-card {
+      width: 100%;
+      height: auto;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      padding: 2em 1em;
+    }
+  
+    .group-button {
+      flex-direction: column;
+      justify-content: center;
+      gap: 1em;
+      width: 65%;
+    }
+  
+    .group-pass > * {
+      flex-basis: 65%;
+    }
+  
+  
+    .text-copy {
+      bottom: 25%;
+    }
+  }
